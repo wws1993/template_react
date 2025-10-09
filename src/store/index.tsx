@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import i18nReducer from './i18nSlice'
+import i18nReducer from '@/store/i18nSlice'
 
 const store = configureStore({
   reducer: {

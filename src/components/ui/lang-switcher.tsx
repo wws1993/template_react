@@ -13,15 +13,13 @@ export const LangSwitcher: React.FC = () => {
     i18n.changeLanguage(l)
   }
 
-  return (
-    <div className="flex items-center gap-2">
-      <label className="mr-2">语言：</label>
-      <select value={lang} onChange={(e) => change(e.target.value)}>
-        <option value="en">English</option>
-        <option value="zh">中文</option>
-      </select>
-    </div>
-  )
+  return <div className="flex items-center gap-2">
+    <label className="mr-2">语言：</label>
+    <select value={lang} onChange={(e) => change(e.target.value)}>
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+    </select>
+  </div>
 }
 
 export default LangSwitcher
