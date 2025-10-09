@@ -1,21 +1,13 @@
-import { createStore, combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit'
+import i18nReducer from './i18nSlice'
 
-// i18n reducer
-const i18nReducer = (state = { language: 'en' }, action) => {
-  switch (action.type) {
-    case 'CHANGE_LANGUAGE':
-      return {
-        ...state,
-        language: action.payload
-      };
-    default:
-      return state;
-  }
-};
+const store = configureStore({
+  reducer: {
+    i18n: i18nReducer,
+  },
+})
 
-// 合并 reducers
-const rootReducer = combineReducers({});
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
 
-const store = createStore(rootReducer);
-
-export default store;
+export default store
