@@ -119,6 +119,8 @@
     color: var(--foreground);
     background-color: var(--background);
   }
+
+  html,body,#root{height:100%;}
 }
 
 @layer utilities {
