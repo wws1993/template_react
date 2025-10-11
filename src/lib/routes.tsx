@@ -6,6 +6,7 @@ import { Layout } from '@/components/layout';
 const Home = lazy(() => import('@/components/pages/Home').then(module => ({ default: module.Home })));
 const About = lazy(() => import('@/components/pages/About').then(module => ({ default: module.About })));
 const Demo_3D = lazy(() => import('@/components/pages/Demo_3D').then(module => ({ default: module.Demo_3D })));
+const Demo_particles = lazy(() => import('@/components/pages/Demo_particles').then(module => ({ default: module.Demo_particles })));
 
 export default function AppRoutes() {
   return <BrowserRouter>
@@ -16,6 +17,7 @@ export default function AppRoutes() {
       </Route>
 
       <Route path="/demo/3d" element={<Demo_3D />} />
+      <Route path="/demo/particles" element={<Demo_particles />} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
   </BrowserRouter>
