@@ -1,7 +1,7 @@
 {
   "name": "template_react",
   "private": true,
-  "version": "0.0.661",
+  "version": "0.0.850",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -53,5 +53,5 @@
       "vite": "npm:rolldown-vite@7.1.14"
     }
   },
-  "lastModify": "2025-10-10 09:34:06"
+  "lastModify": "2025-10-11 11:22:39"
 }
