@@ -19,7 +19,7 @@ export default function AppRoutes() {
 
       <Route path="/demo/3d" element={<Demo_3D />} />
       <Route path="/demo/particles" element={<Demo_particles />} />
-      <Route path="/demo/particles/v2" element={<Demo_particlesV2 />} />
+      <Route path="/demo/particles-v2" element={<Demo_particlesV2 />} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
   </BrowserRouter>

@@ -123,7 +123,7 @@ function Particles({
         // 依据：smoothstep(edge0, edge1, x) 提供 S 曲线；前段淡入、后段淡出
 
         // t∈[0,0.35] 快速从 0→1
-        float fadeIn = smoothstep(0.00, 0.35, t);   
+        float fadeIn = smoothstep(0.00, 0.6, t);   
         // t∈[0.60,1.0] 从 1→0
         float fadeOut = 1.0 - smoothstep(0.60, 1.00, t);
         // 中段最亮，两端渐隐
@@ -179,19 +179,17 @@ function Particles({
     uniforms.uTime.value += delta
   })
 
-  return (
-    <points ref={pointsRef} args={[geometry, material]} frustumCulled={false} />
-  )
+  return <points ref={pointsRef} args={[geometry, material]} frustumCulled={false} />
 }
 
 export function Demo_particles() {
   return <Canvas className="size-full" camera={{ position: [0, 5, 12], fov: 60 }}>
     <Particles
-      count={2000}
+      count={1000}
       turns={1}
-      height={3}
-      speed={0.02}
-      radiusBase={0.2}
+      height={3.5}
+      speed={-0.02}
+      radiusBase={0.1}
       radiusSlope={2.2}
       size={10}
       color="#7dd3fc" // sky-300
