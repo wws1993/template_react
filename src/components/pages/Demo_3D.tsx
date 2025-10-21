@@ -30,10 +30,11 @@ function Cube() {
     onPointerOut={() => setHover(false)}
   >
     <boxGeometry args={[1, 1, 1]} />
-    <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+    {/* <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} /> */}
   </e.mesh>
 }
 
+/** 使用 @theatre/r3f 的 Canvas 组件 做自定义mesh动画 */
 export function Demo_3D() {
   return <Canvas>
     <SheetProvider sheet={demoSheet}>
